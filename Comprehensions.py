@@ -33,5 +33,11 @@ for i in range(5):
 #Reduce performs some computation on a list and returns the result. E.g: Product/Sum of all the elements in the list
 
 from functools import reduce
-product = reduce((lambda x, y: x + y), [1, 2, 3, 4])
+product = reduce((lambda x, y: x * y), [4,3,2,1])
 print(product)
+#How does it work:
+'''
+4,3: 12 ->
+12,2: 24 ->
+24,1: 24
+'''
