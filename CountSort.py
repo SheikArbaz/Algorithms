@@ -13,7 +13,7 @@ def count_sort(arr):
 	for i in range(1,k):
 		count[i]+=count[i-1]
 
-	#Fix the position of A[i]: the value C[A[]i]is the correct final position A[i] in the output array, 
+	#Fix the position of A[i]: the value C[A[i]]is the correct final position A[i] in the output array, 
 								#since there are C[A[i]]elements less than or equal A[i]
 	b = [0]*(n)
 	for i in range(n-1,-1,-1):
