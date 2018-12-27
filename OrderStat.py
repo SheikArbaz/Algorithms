@@ -35,5 +35,5 @@ arr = [7, 10, 4, 3, 20, 15]
 k = 1
 
 n = len(arr)
-print(kth_smallest(arr, 0, n-1, 6))
+print(kth_smallest(arr, 0, n-1, 1))
 # print(arr)
