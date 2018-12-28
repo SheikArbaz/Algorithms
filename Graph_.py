@@ -45,6 +45,27 @@ def bfs(adj_list, n, src):
 	print_path(adj_list, 1, 8)#src is fixed src
 	print()
 
+def dfs(adj_list, n):
+	parent = [0]*(n+1)
+	color = [0]*(n+1)
+	dist = [float("inf")]*(n+1)
+	time = 0
+	def dfs_visit(adj_list,u):
+		print(u,end = ' ')
+		time+=1
+		dist[u]=time
+		color[u]=1
+		for v,weight in adj_list[u]:
+			if color[v]==0:
+				color[v]=1
+				parent[v]=u
+				dfs_visit(adj_list,v)
+		color[u]=2
+	for i in range(1,n+1):
+		if color[i]==0:
+			dfs_visit(adj_list,i)
+	print()
+
 
 
 n = int(input().strip())
@@ -60,8 +81,8 @@ while i<no_edges:
 	i+=1
 
 print_adj_list(adj_list, n)
-bfs(adj_list, n, 2)
-
+# bfs(adj_list, n, 2)
+dfs(adj_list, n)
 
 
 
