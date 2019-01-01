@@ -28,7 +28,7 @@ def dfs_visit(adj_list,u):
 	color[u]=2
 	time+=1
 	finish[u]=time
-	order.insert(0,u)
+	order.append(u)
 	print(u,end = ' finished ')
 
 def dfs(adj_list, n):
@@ -59,7 +59,7 @@ while i<no_edges:
 print_adj_list(adj_list, n)
 # bfs(adj_list, n, 2)
 dfs(adj_list, n)
-print('topological sort:', order)
+print('topological sort:', list(reversed(order)))
 
 
 
@@ -68,10 +68,10 @@ print('topological sort:', order)
 #Sample Input
 '''
 5
-5
+4
 1 4
 2 1
-3 2
+2 3
 4 5
 
 
