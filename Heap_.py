@@ -1,3 +1,4 @@
+
 def get_left(i):
 	return 2*i
 def get_right(i):
